@@ -1,0 +1,850 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_info"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#hasAgency_id">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#hasTrip_id">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#hasRoute_id">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#hasStop_id">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#route_text_color">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#conv_rev">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_info"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_publisher_name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_info"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#drop_off_type">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_lon">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#block_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#s">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#service_id">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#lat">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#from_stop_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_desc">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_headsign">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_info"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_timezone_header">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#direction_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_lang">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_info"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#route_desc">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_version">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_info"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfer_type">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#pickup_type">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#zone_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#route_type">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#departure_time">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#arrival_time">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_end_date">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_info"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trip_headsign">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#parent_station">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#route_long_name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#shape_dist_traveled">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#shape_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#route_short_name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#route_url">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#route_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_url">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_publisher_url">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_info"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#from_route_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trip_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#to_route_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency_lang">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_lat">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#route_color">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#to_stop_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#date">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#min_transfer_time">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#long">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#location_type">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_sequence">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency_id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency_url">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#exception_type">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency_name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_start_date">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_info"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency_timezone">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#plan_rev">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_info"/>
+  </owl:DatatypeProperty>
+  <j.0:stops rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops6">
+    <j.0:stop_name>Montlouis</j.0:stop_name>
+    <j.0:stop_desc></j.0:stop_desc>
+    <j.0:parent_station>StopArea:OCE87571273</j.0:parent_station>
+    <j.0:zone_id></j.0:zone_id>
+    <j.0:location_type>0</j.0:location_type>
+    <j.0:stop_id>StopPoint:OCETrain TER-87571273</j.0:stop_id>
+    <j.0:stop_url></j.0:stop_url>
+    <j.0:stop_lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >47.391563</j.0:stop_lat>
+    <j.0:stop_lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.817476</j.0:stop_lon>
+  </j.0:stops>
+  <j.0:transfers rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers1">
+    <j.0:min_transfer_time>300</j.0:min_transfer_time>
+    <j.0:transfer_type>2</j.0:transfer_type>
+    <j.0:to_stop_id>StopPoint:OCETrain TER-71793150</j.0:to_stop_id>
+    <j.0:from_stop_id>StopPoint:OCETrain TER-71793150</j.0:from_stop_id>
+  </j.0:transfers>
+  <j.0:trips rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips10">
+    <j.0:hasRoute_id>
+      <j.0:routes rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes4">
+        <j.0:hasAgency_id>
+          <j.0:agency rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency2">
+            <j.0:agency_lang>fr</j.0:agency_lang>
+            <j.0:agency_timezone>Europe/Paris</j.0:agency_timezone>
+            <j.0:agency_url>http://www.sncf.com</j.0:agency_url>
+            <j.0:agency_name>SNCF</j.0:agency_name>
+            <j.0:agency_id>OCESN</j.0:agency_id>
+          </j.0:agency>
+        </j.0:hasAgency_id>
+        <j.0:route_type>1</j.0:route_type>
+        <j.0:route_desc></j.0:route_desc>
+        <j.0:route_long_name>"""TOURS-ST PIERRE """"NAVETTES TGV"""""""</j.0:route_long_name>
+        <j.0:route_short_name>422100</j.0:route_short_name>
+        <j.0:route_id>OCESN-413</j.0:route_id>
+      </j.0:routes>
+    </j.0:hasRoute_id>
+    <j.0:block_id>10</j.0:block_id>
+    <j.0:direction_id>1</j.0:direction_id>
+    <j.0:trip_headsign>105367</j.0:trip_headsign>
+    <j.0:trip_id>OCESN105367F451133:2021-12-08T13:03:12Z</j.0:trip_id>
+    <j.0:service_id>000005</j.0:service_id>
+  </j.0:trips>
+  <j.0:cities rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities4">
+    <j.0:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >-1.6794</j.0:long>
+    <j.0:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >48.1147</j.0:lat>
+    <j.0:s>http://dbpedia.org/resource/Rennes</j.0:s>
+  </j.0:cities>
+  <j.0:calendar_dates rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates7">
+    <j.0:exception_type>1</j.0:exception_type>
+    <j.0:date>20220123</j.0:date>
+    <j.0:service_id>000001</j.0:service_id>
+  </j.0:calendar_dates>
+  <j.0:stop_times rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times9">
+    <j.0:hasStop_id>
+      <j.0:stops rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops2">
+        <j.0:location_type>0</j.0:location_type>
+        <j.0:stop_lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >0.723539</j.0:stop_lon>
+        <j.0:stop_name>Saint-Pierre-des-Corps</j.0:stop_name>
+        <j.0:stop_desc></j.0:stop_desc>
+        <j.0:zone_id></j.0:zone_id>
+        <j.0:stop_url></j.0:stop_url>
+        <j.0:parent_station>StopArea:OCE87571240</j.0:parent_station>
+        <j.0:stop_lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >47.38614</j.0:stop_lat>
+        <j.0:stop_id>StopPoint:OCENavette-87571240</j.0:stop_id>
+      </j.0:stops>
+    </j.0:hasStop_id>
+    <j.0:hasTrip_id>
+      <j.0:trips rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips5">
+        <j.0:hasRoute_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes4"/>
+        <j.0:block_id>5</j.0:block_id>
+        <j.0:direction_id>1</j.0:direction_id>
+        <j.0:trip_headsign>105345</j.0:trip_headsign>
+        <j.0:trip_id>OCESN105345F603602:2021-12-08T20:44:38Z</j.0:trip_id>
+        <j.0:service_id>000005</j.0:service_id>
+      </j.0:trips>
+    </j.0:hasTrip_id>
+    <j.0:drop_off_type>1</j.0:drop_off_type>
+    <j.0:pickup_type>0</j.0:pickup_type>
+    <j.0:stop_headsign></j.0:stop_headsign>
+    <j.0:stop_sequence>0</j.0:stop_sequence>
+    <j.0:departure_time>19:40:00</j.0:departure_time>
+    <j.0:arrival_time>19:40:00</j.0:arrival_time>
+  </j.0:stop_times>
+  <j.0:routes rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes5">
+    <j.0:hasAgency_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency2"/>
+    <j.0:route_type>3</j.0:route_type>
+    <j.0:route_desc></j.0:route_desc>
+    <j.0:route_long_name>Cars Clermont Fd / Ussel / Mauriac</j.0:route_long_name>
+    <j.0:route_short_name>CF1800</j.0:route_short_name>
+    <j.0:route_id>OCESN-420859</j.0:route_id>
+  </j.0:routes>
+  <j.0:transfers rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers9">
+    <j.0:min_transfer_time>300</j.0:min_transfer_time>
+    <j.0:transfer_type>2</j.0:transfer_type>
+    <j.0:to_stop_id>StopPoint:OCETrain TER-80144139</j.0:to_stop_id>
+    <j.0:from_stop_id>StopPoint:OCETrain TER-80144139</j.0:from_stop_id>
+  </j.0:transfers>
+  <j.0:calendar_dates rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates10">
+    <j.0:exception_type>1</j.0:exception_type>
+    <j.0:date>20220213</j.0:date>
+    <j.0:service_id>000001</j.0:service_id>
+  </j.0:calendar_dates>
+  <j.0:stop_times rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times1">
+    <j.0:hasStop_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops2"/>
+    <j.0:hasTrip_id>
+      <j.0:trips rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips1">
+        <j.0:hasRoute_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes4"/>
+        <j.0:block_id>1</j.0:block_id>
+        <j.0:direction_id>1</j.0:direction_id>
+        <j.0:trip_headsign>105330</j.0:trip_headsign>
+        <j.0:trip_id>OCESN105330F600360:2021-12-08T20:44:38Z</j.0:trip_id>
+        <j.0:service_id>000001</j.0:service_id>
+      </j.0:trips>
+    </j.0:hasTrip_id>
+    <j.0:drop_off_type>1</j.0:drop_off_type>
+    <j.0:pickup_type>0</j.0:pickup_type>
+    <j.0:stop_headsign></j.0:stop_headsign>
+    <j.0:stop_sequence>0</j.0:stop_sequence>
+    <j.0:departure_time>07:27:00</j.0:departure_time>
+    <j.0:arrival_time>07:27:00</j.0:arrival_time>
+  </j.0:stop_times>
+  <j.0:stops rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops5">
+    <j.0:stop_lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >47.391563</j.0:stop_lat>
+    <j.0:stop_url></j.0:stop_url>
+    <j.0:parent_station>StopArea:OCE87571273</j.0:parent_station>
+    <j.0:location_type>0</j.0:location_type>
+    <j.0:zone_id></j.0:zone_id>
+    <j.0:stop_desc></j.0:stop_desc>
+    <j.0:stop_lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.817476</j.0:stop_lon>
+    <j.0:stop_name>Montlouis</j.0:stop_name>
+    <j.0:stop_id>StopPoint:OCECar TER-87571273</j.0:stop_id>
+  </j.0:stops>
+  <j.0:routes rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes10">
+    <j.0:hasAgency_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency2"/>
+    <j.0:route_type>2</j.0:route_type>
+    <j.0:route_desc></j.0:route_desc>
+    <j.0:route_long_name>Toulouse / Auch</j.0:route_long_name>
+    <j.0:route_short_name>MP 01</j.0:route_short_name>
+    <j.0:route_id>OCESN-4618</j.0:route_id>
+  </j.0:routes>
+  <j.0:trips rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips8">
+    <j.0:hasRoute_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes4"/>
+    <j.0:block_id>8</j.0:block_id>
+    <j.0:direction_id>1</j.0:direction_id>
+    <j.0:trip_headsign>105350</j.0:trip_headsign>
+    <j.0:trip_id>OCESN105350F600286:2021-12-08T20:44:38Z</j.0:trip_id>
+    <j.0:service_id>000006</j.0:service_id>
+  </j.0:trips>
+  <j.0:transfers rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers2">
+    <j.0:min_transfer_time>300</j.0:min_transfer_time>
+    <j.0:transfer_type>2</j.0:transfer_type>
+    <j.0:to_stop_id>StopPoint:OCETrain TER-80142893</j.0:to_stop_id>
+    <j.0:from_stop_id>StopPoint:OCETrain TER-80142893</j.0:from_stop_id>
+  </j.0:transfers>
+  <j.0:cities rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities5">
+    <j.0:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.08861</j.0:long>
+    <j.0:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >49.4428</j.0:lat>
+    <j.0:s>http://dbpedia.org/resource/Rouen</j.0:s>
+  </j.0:cities>
+  <j.0:calendar_dates rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates6">
+    <j.0:exception_type>1</j.0:exception_type>
+    <j.0:date>20220116</j.0:date>
+    <j.0:service_id>000001</j.0:service_id>
+  </j.0:calendar_dates>
+  <j.0:stop_times rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times8">
+    <j.0:hasTrip_id>
+      <j.0:trips rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips4">
+        <j.0:hasRoute_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes4"/>
+        <j.0:block_id>4</j.0:block_id>
+        <j.0:direction_id>1</j.0:direction_id>
+        <j.0:trip_headsign>105342</j.0:trip_headsign>
+        <j.0:trip_id>OCESN105342F605852:2021-12-08T20:44:38Z</j.0:trip_id>
+        <j.0:service_id>000004</j.0:service_id>
+      </j.0:trips>
+    </j.0:hasTrip_id>
+    <j.0:drop_off_type>0</j.0:drop_off_type>
+    <j.0:pickup_type>1</j.0:pickup_type>
+    <j.0:stop_headsign></j.0:stop_headsign>
+    <j.0:stop_sequence>1</j.0:stop_sequence>
+    <j.0:departure_time>17:25:00</j.0:departure_time>
+    <j.0:arrival_time>17:25:00</j.0:arrival_time>
+  </j.0:stop_times>
+  <j.0:stops rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops4">
+    <j.0:location_type>1</j.0:location_type>
+    <j.0:stop_url></j.0:stop_url>
+    <j.0:zone_id></j.0:zone_id>
+    <j.0:stop_lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.817476</j.0:stop_lon>
+    <j.0:stop_lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >47.391563</j.0:stop_lat>
+    <j.0:stop_desc></j.0:stop_desc>
+    <j.0:stop_name>Montlouis</j.0:stop_name>
+    <j.0:stop_id>StopArea:OCE87571273</j.0:stop_id>
+  </j.0:stops>
+  <j.0:trips rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips7">
+    <j.0:hasRoute_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes4"/>
+    <j.0:block_id>7</j.0:block_id>
+    <j.0:direction_id>1</j.0:direction_id>
+    <j.0:trip_headsign>105347</j.0:trip_headsign>
+    <j.0:trip_id>OCESN105347F603160:2021-12-08T20:44:38Z</j.0:trip_id>
+    <j.0:service_id>000002</j.0:service_id>
+  </j.0:trips>
+  <j.0:stops rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops8">
+    <j.0:stop_name>Montbazon</j.0:stop_name>
+    <j.0:stop_id>StopPoint:OCECar TER-87571406</j.0:stop_id>
+    <j.0:stop_desc></j.0:stop_desc>
+    <j.0:stop_lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >47.29163</j.0:stop_lat>
+    <j.0:zone_id></j.0:zone_id>
+    <j.0:location_type>0</j.0:location_type>
+    <j.0:stop_lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.721005</j.0:stop_lon>
+    <j.0:stop_url></j.0:stop_url>
+    <j.0:parent_station>StopArea:OCE87571406</j.0:parent_station>
+  </j.0:stops>
+  <j.0:calendar_dates rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates9">
+    <j.0:exception_type>1</j.0:exception_type>
+    <j.0:date>20220206</j.0:date>
+    <j.0:service_id>000001</j.0:service_id>
+  </j.0:calendar_dates>
+  <j.0:transfers rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers3">
+    <j.0:min_transfer_time>300</j.0:min_transfer_time>
+    <j.0:transfer_type>2</j.0:transfer_type>
+    <j.0:to_stop_id>StopPoint:OCETrain TER-80142901</j.0:to_stop_id>
+    <j.0:from_stop_id>StopPoint:OCETrain TER-80142901</j.0:from_stop_id>
+  </j.0:transfers>
+  <j.0:agency rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency1">
+    <j.0:agency_lang>fr</j.0:agency_lang>
+    <j.0:agency_timezone>Europe/Paris</j.0:agency_timezone>
+    <j.0:agency_url>http://www.sncf.com</j.0:agency_url>
+    <j.0:agency_name>SNCF_default</j.0:agency_name>
+    <j.0:agency_id>OCEdefault</j.0:agency_id>
+  </j.0:agency>
+  <j.0:routes rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes3">
+    <j.0:hasAgency_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency2"/>
+    <j.0:route_type>3</j.0:route_type>
+    <j.0:route_desc></j.0:route_desc>
+    <j.0:route_long_name>ST Tropez-Le Luc-Aix TGV</j.0:route_long_name>
+    <j.0:route_short_name>CAR36</j.0:route_short_name>
+    <j.0:route_id>OCESN-400864</j.0:route_id>
+  </j.0:routes>
+  <j.0:calendar_dates rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates1">
+    <j.0:exception_type>1</j.0:exception_type>
+    <j.0:date>20211212</j.0:date>
+    <j.0:service_id>000001</j.0:service_id>
+  </j.0:calendar_dates>
+  <j.0:stop_times rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times3">
+    <j.0:hasStop_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops2"/>
+    <j.0:hasTrip_id>
+      <j.0:trips rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips2">
+        <j.0:hasRoute_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes4"/>
+        <j.0:block_id>2</j.0:block_id>
+        <j.0:direction_id>1</j.0:direction_id>
+        <j.0:trip_headsign>105340</j.0:trip_headsign>
+        <j.0:trip_id>OCESN105340F600461:2021-12-08T20:44:38Z</j.0:trip_id>
+        <j.0:service_id>000002</j.0:service_id>
+      </j.0:trips>
+    </j.0:hasTrip_id>
+    <j.0:drop_off_type>1</j.0:drop_off_type>
+    <j.0:pickup_type>0</j.0:pickup_type>
+    <j.0:stop_headsign></j.0:stop_headsign>
+    <j.0:stop_sequence>0</j.0:stop_sequence>
+    <j.0:departure_time>12:25:00</j.0:departure_time>
+    <j.0:arrival_time>12:25:00</j.0:arrival_time>
+  </j.0:stop_times>
+  <j.0:cities rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities6">
+    <j.0:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >-61.3833</j.0:long>
+    <j.0:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >16.2333</j.0:lat>
+    <j.0:s>http://dbpedia.org/resource/Sainte-Anne,_Guadeloupe</j.0:s>
+  </j.0:cities>
+  <j.0:trips rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips6">
+    <j.0:hasRoute_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes4"/>
+    <j.0:block_id>6</j.0:block_id>
+    <j.0:direction_id>1</j.0:direction_id>
+    <j.0:trip_headsign>105346</j.0:trip_headsign>
+    <j.0:trip_id>OCESN105346F499488:2021-12-11T20:46:47Z</j.0:trip_id>
+    <j.0:service_id>000003</j.0:service_id>
+  </j.0:trips>
+  <j.0:stops rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops7">
+    <j.0:location_type>1</j.0:location_type>
+    <j.0:stop_url></j.0:stop_url>
+    <j.0:zone_id></j.0:zone_id>
+    <j.0:stop_lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.721005</j.0:stop_lon>
+    <j.0:stop_lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >47.29163</j.0:stop_lat>
+    <j.0:stop_desc></j.0:stop_desc>
+    <j.0:stop_name>Montbazon</j.0:stop_name>
+    <j.0:stop_id>StopArea:OCE87571406</j.0:stop_id>
+  </j.0:stops>
+  <j.0:transfers rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers4">
+    <j.0:min_transfer_time>300</j.0:min_transfer_time>
+    <j.0:transfer_type>2</j.0:transfer_type>
+    <j.0:to_stop_id>StopPoint:OCETrain TER-80142919</j.0:to_stop_id>
+    <j.0:from_stop_id>StopPoint:OCETrain TER-80142919</j.0:from_stop_id>
+  </j.0:transfers>
+  <j.0:routes rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes2">
+    <j.0:hasAgency_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency2"/>
+    <j.0:route_type>3</j.0:route_type>
+    <j.0:route_desc></j.0:route_desc>
+    <j.0:route_long_name>Desserte Gapençais</j.0:route_long_name>
+    <j.0:route_short_name>CAR33</j.0:route_short_name>
+    <j.0:route_id>OCESN-400863</j.0:route_id>
+  </j.0:routes>
+  <j.0:calendar_dates rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates8">
+    <j.0:exception_type>1</j.0:exception_type>
+    <j.0:date>20220130</j.0:date>
+    <j.0:service_id>000001</j.0:service_id>
+  </j.0:calendar_dates>
+  <j.0:transfers rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers10">
+    <j.0:min_transfer_time>300</j.0:min_transfer_time>
+    <j.0:transfer_type>2</j.0:transfer_type>
+    <j.0:to_stop_id>StopPoint:OCECar TER-80144139</j.0:to_stop_id>
+    <j.0:from_stop_id>StopPoint:OCECar TER-80144139</j.0:from_stop_id>
+  </j.0:transfers>
+  <j.0:cities rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities10">
+    <j.0:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >2.0952</j.0:long>
+    <j.0:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >49.4303</j.0:lat>
+    <j.0:s>http://dbpedia.org/resource/Beauvais</j.0:s>
+  </j.0:cities>
+  <j.0:stop_times rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times2">
+    <j.0:hasTrip_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips1"/>
+    <j.0:drop_off_type>0</j.0:drop_off_type>
+    <j.0:pickup_type>1</j.0:pickup_type>
+    <j.0:stop_headsign></j.0:stop_headsign>
+    <j.0:stop_sequence>1</j.0:stop_sequence>
+    <j.0:departure_time>07:32:00</j.0:departure_time>
+    <j.0:arrival_time>07:32:00</j.0:arrival_time>
+  </j.0:stop_times>
+  <j.0:cities rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities7">
+    <j.0:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >-61.6164</j.0:long>
+    <j.0:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >15.855</j.0:lat>
+    <j.0:s>http://dbpedia.org/resource/Petite-Anse,_les_Saintes</j.0:s>
+  </j.0:cities>
+  <j.0:routes rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes1">
+    <j.0:hasAgency_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency2"/>
+    <j.0:route_type>3</j.0:route_type>
+    <j.0:route_desc></j.0:route_desc>
+    <j.0:route_long_name>Forcalquier-Manosque-Marseille</j.0:route_long_name>
+    <j.0:route_short_name>CAR25</j.0:route_short_name>
+    <j.0:route_id>OCESN-400861</j.0:route_id>
+  </j.0:routes>
+  <j.0:transfers rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers5">
+    <j.0:min_transfer_time>300</j.0:min_transfer_time>
+    <j.0:transfer_type>2</j.0:transfer_type>
+    <j.0:to_stop_id>StopPoint:OCECar TER-80142927</j.0:to_stop_id>
+    <j.0:from_stop_id>StopPoint:OCECar TER-80142927</j.0:from_stop_id>
+  </j.0:transfers>
+  <j.0:calendar_dates rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates3">
+    <j.0:exception_type>1</j.0:exception_type>
+    <j.0:date>20211226</j.0:date>
+    <j.0:service_id>000001</j.0:service_id>
+  </j.0:calendar_dates>
+  <j.0:routes rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes9">
+    <j.0:hasAgency_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency2"/>
+    <j.0:route_type>2</j.0:route_type>
+    <j.0:route_desc></j.0:route_desc>
+    <j.0:route_long_name>Geneve - Evian - Annecy - Valence - Avignon</j.0:route_long_name>
+    <j.0:route_short_name>K021</j.0:route_short_name>
+    <j.0:route_id>OCESN-46</j.0:route_id>
+  </j.0:routes>
+  <j.0:cities rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities8">
+    <j.0:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >4.6278</j.0:long>
+    <j.0:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >43.6767</j.0:lat>
+    <j.0:s>http://dbpedia.org/resource/Arles</j.0:s>
+  </j.0:cities>
+  <j.0:stop_times rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times5">
+    <j.0:hasStop_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops2"/>
+    <j.0:hasTrip_id>
+      <j.0:trips rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips3">
+        <j.0:hasRoute_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes4"/>
+        <j.0:block_id>3</j.0:block_id>
+        <j.0:direction_id>1</j.0:direction_id>
+        <j.0:trip_headsign>105342</j.0:trip_headsign>
+        <j.0:trip_id>OCESN105342F502177:2021-12-09T20:47:39Z</j.0:trip_id>
+        <j.0:service_id>000003</j.0:service_id>
+      </j.0:trips>
+    </j.0:hasTrip_id>
+    <j.0:drop_off_type>1</j.0:drop_off_type>
+    <j.0:pickup_type>0</j.0:pickup_type>
+    <j.0:stop_headsign></j.0:stop_headsign>
+    <j.0:stop_sequence>0</j.0:stop_sequence>
+    <j.0:departure_time>17:24:00</j.0:departure_time>
+    <j.0:arrival_time>17:24:00</j.0:arrival_time>
+  </j.0:stop_times>
+  <j.0:stops rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops1">
+    <j.0:location_type>1</j.0:location_type>
+    <j.0:stop_url></j.0:stop_url>
+    <j.0:zone_id></j.0:zone_id>
+    <j.0:stop_lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.723539</j.0:stop_lon>
+    <j.0:stop_lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >47.38614</j.0:stop_lat>
+    <j.0:stop_desc></j.0:stop_desc>
+    <j.0:stop_name>Saint-Pierre-des-Corps</j.0:stop_name>
+    <j.0:stop_id>StopArea:OCE87571240</j.0:stop_id>
+  </j.0:stops>
+  <j.0:stops rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops9">
+    <j.0:location_type>1</j.0:location_type>
+    <j.0:stop_url></j.0:stop_url>
+    <j.0:zone_id></j.0:zone_id>
+    <j.0:stop_lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.73488</j.0:stop_lon>
+    <j.0:stop_lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >47.291225</j.0:stop_lat>
+    <j.0:stop_desc></j.0:stop_desc>
+    <j.0:stop_name>Veigné</j.0:stop_name>
+    <j.0:stop_id>StopArea:OCE87571414</j.0:stop_id>
+  </j.0:stops>
+  <j.0:transfers rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers6">
+    <j.0:min_transfer_time>300</j.0:min_transfer_time>
+    <j.0:transfer_type>2</j.0:transfer_type>
+    <j.0:to_stop_id>StopPoint:OCETrain TER-80142927</j.0:to_stop_id>
+    <j.0:from_stop_id>StopPoint:OCETrain TER-80142927</j.0:from_stop_id>
+  </j.0:transfers>
+  <j.0:cities rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities1">
+    <j.0:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >-134.969</j.0:long>
+    <j.0:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >-23.1203</j.0:lat>
+    <j.0:s>http://dbpedia.org/resource/Rikitea</j.0:s>
+  </j.0:cities>
+  <j.0:calendar_dates rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates2">
+    <j.0:exception_type>1</j.0:exception_type>
+    <j.0:date>20211219</j.0:date>
+    <j.0:service_id>000001</j.0:service_id>
+  </j.0:calendar_dates>
+  <j.0:routes rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes8">
+    <j.0:hasAgency_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency2"/>
+    <j.0:route_type>3</j.0:route_type>
+    <j.0:route_desc></j.0:route_desc>
+    <j.0:route_long_name>Cars Bort Les Orgues / Neussargues</j.0:route_long_name>
+    <j.0:route_short_name>CF1814</j.0:route_short_name>
+    <j.0:route_id>OCESN-456859</j.0:route_id>
+  </j.0:routes>
+  <j.0:cities rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities9">
+    <j.0:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >-1.48</j.0:long>
+    <j.0:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >43.49</j.0:lat>
+    <j.0:s>http://dbpedia.org/resource/Bayonne</j.0:s>
+  </j.0:cities>
+  <j.0:stop_times rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times4">
+    <j.0:hasTrip_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips2"/>
+    <j.0:drop_off_type>0</j.0:drop_off_type>
+    <j.0:pickup_type>1</j.0:pickup_type>
+    <j.0:stop_headsign></j.0:stop_headsign>
+    <j.0:stop_sequence>1</j.0:stop_sequence>
+    <j.0:departure_time>12:30:00</j.0:departure_time>
+    <j.0:arrival_time>12:30:00</j.0:arrival_time>
+  </j.0:stop_times>
+  <j.0:stops rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops10">
+    <j.0:stop_id>StopPoint:OCECar TER-87571414</j.0:stop_id>
+    <j.0:stop_lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >47.291225</j.0:stop_lat>
+    <j.0:stop_url></j.0:stop_url>
+    <j.0:zone_id></j.0:zone_id>
+    <j.0:parent_station>StopArea:OCE87571414</j.0:parent_station>
+    <j.0:stop_desc></j.0:stop_desc>
+    <j.0:location_type>0</j.0:location_type>
+    <j.0:stop_name>Veigné</j.0:stop_name>
+    <j.0:stop_lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.73488</j.0:stop_lon>
+  </j.0:stops>
+  <j.0:calendar_dates rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates5">
+    <j.0:exception_type>1</j.0:exception_type>
+    <j.0:date>20220109</j.0:date>
+    <j.0:service_id>000001</j.0:service_id>
+  </j.0:calendar_dates>
+  <j.0:transfers rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers7">
+    <j.0:min_transfer_time>300</j.0:min_transfer_time>
+    <j.0:transfer_type>2</j.0:transfer_type>
+    <j.0:to_stop_id>StopPoint:OCETrain TER-80143099</j.0:to_stop_id>
+    <j.0:from_stop_id>StopPoint:OCETrain TER-80143099</j.0:from_stop_id>
+  </j.0:transfers>
+  <j.0:stop_times rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times7">
+    <j.0:hasStop_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops2"/>
+    <j.0:hasTrip_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips4"/>
+    <j.0:drop_off_type>1</j.0:drop_off_type>
+    <j.0:pickup_type>0</j.0:pickup_type>
+    <j.0:stop_headsign></j.0:stop_headsign>
+    <j.0:stop_sequence>0</j.0:stop_sequence>
+    <j.0:departure_time>17:20:00</j.0:departure_time>
+    <j.0:arrival_time>17:20:00</j.0:arrival_time>
+  </j.0:stop_times>
+  <j.0:cities rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities2">
+    <j.0:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >-1.1517</j.0:long>
+    <j.0:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >46.1591</j.0:lat>
+    <j.0:s>http://dbpedia.org/resource/La_Rochelle</j.0:s>
+  </j.0:cities>
+  <j.0:routes rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes7">
+    <j.0:hasAgency_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency2"/>
+    <j.0:route_type>3</j.0:route_type>
+    <j.0:route_desc></j.0:route_desc>
+    <j.0:route_long_name>Cars Volvic / St Gervais</j.0:route_long_name>
+    <j.0:route_short_name>CF1807</j.0:route_short_name>
+    <j.0:route_id>OCESN-428859</j.0:route_id>
+  </j.0:routes>
+  <j.0:stop_times rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times10">
+    <j.0:hasTrip_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips5"/>
+    <j.0:drop_off_type>0</j.0:drop_off_type>
+    <j.0:pickup_type>1</j.0:pickup_type>
+    <j.0:stop_headsign></j.0:stop_headsign>
+    <j.0:stop_sequence>1</j.0:stop_sequence>
+    <j.0:departure_time>19:45:00</j.0:departure_time>
+    <j.0:arrival_time>19:45:00</j.0:arrival_time>
+  </j.0:stop_times>
+  <j.0:stops rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stops3">
+    <j.0:stop_url></j.0:stop_url>
+    <j.0:parent_station>StopArea:OCE87571240</j.0:parent_station>
+    <j.0:stop_lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >47.38614</j.0:stop_lat>
+    <j.0:stop_name>Saint-Pierre-des-Corps</j.0:stop_name>
+    <j.0:stop_desc></j.0:stop_desc>
+    <j.0:location_type>0</j.0:location_type>
+    <j.0:zone_id></j.0:zone_id>
+    <j.0:stop_lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.723539</j.0:stop_lon>
+    <j.0:stop_id>StopPoint:OCETrain TER-87571240</j.0:stop_id>
+  </j.0:stops>
+  <j.0:feed_info rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#feed_info1">
+    <j.0:conv_rev>1.138</j.0:conv_rev>
+    <j.0:feed_version>2021-12-11</j.0:feed_version>
+    <j.0:feed_end_date>20220312</j.0:feed_end_date>
+    <j.0:feed_start_date>20211211</j.0:feed_start_date>
+    <j.0:feed_lang>fr</j.0:feed_lang>
+    <j.0:feed_publisher_url>http://www.sncf.com</j.0:feed_publisher_url>
+    <j.0:feed_publisher_name>SNCF_default</j.0:feed_publisher_name>
+    <j.0:feed_id>0</j.0:feed_id>
+  </j.0:feed_info>
+  <j.0:stop_times rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#stop_times6">
+    <j.0:hasTrip_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips3"/>
+    <j.0:drop_off_type>0</j.0:drop_off_type>
+    <j.0:pickup_type>1</j.0:pickup_type>
+    <j.0:stop_headsign></j.0:stop_headsign>
+    <j.0:stop_sequence>1</j.0:stop_sequence>
+    <j.0:departure_time>17:29:00</j.0:departure_time>
+    <j.0:arrival_time>17:29:00</j.0:arrival_time>
+  </j.0:stop_times>
+  <j.0:transfers rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#transfers8">
+    <j.0:min_transfer_time>300</j.0:min_transfer_time>
+    <j.0:transfer_type>2</j.0:transfer_type>
+    <j.0:to_stop_id>StopPoint:OCETrain TER-80143503</j.0:to_stop_id>
+    <j.0:from_stop_id>StopPoint:OCETrain TER-80143503</j.0:from_stop_id>
+  </j.0:transfers>
+  <j.0:cities rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#cities3">
+    <j.0:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >3.6244</j.0:long>
+    <j.0:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >49.5639</j.0:lat>
+    <j.0:s>http://dbpedia.org/resource/Laon</j.0:s>
+  </j.0:cities>
+  <j.0:calendar_dates rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#calendar_dates4">
+    <j.0:exception_type>1</j.0:exception_type>
+    <j.0:date>20220102</j.0:date>
+    <j.0:service_id>000001</j.0:service_id>
+  </j.0:calendar_dates>
+  <j.0:routes rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes6">
+    <j.0:hasAgency_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#agency2"/>
+    <j.0:route_type>3</j.0:route_type>
+    <j.0:route_desc></j.0:route_desc>
+    <j.0:route_long_name>Cars St Gervais / St Eloy / Montluçon</j.0:route_long_name>
+    <j.0:route_short_name>CF1806</j.0:route_short_name>
+    <j.0:route_id>OCESN-424860</j.0:route_id>
+  </j.0:routes>
+  <j.0:trips rdf:about="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#trips9">
+    <j.0:hasRoute_id rdf:resource="http://www.semanticweb.org/bisho/ontologies/2021/12/untitled-ontology-14#routes4"/>
+    <j.0:block_id>9</j.0:block_id>
+    <j.0:direction_id>1</j.0:direction_id>
+    <j.0:trip_headsign>105362</j.0:trip_headsign>
+    <j.0:trip_id>OCESN105362F608377:2021-12-08T20:44:38Z</j.0:trip_id>
+    <j.0:service_id>000002</j.0:service_id>
+  </j.0:trips>
+</rdf:RDF>
